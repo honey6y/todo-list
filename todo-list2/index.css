@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.none {
+    display: none;
+}
+
+.stocking > td {
+    background-color: rgb(95, 146, 95);
+    color: #fff !important;
+}
+
+.out-of-stock > td {
+    background-color: darkgrey;
+}
+
+.date-one-day > td {
+    background-color: orange;
+    color: #fff !important;
+}
