@@ -4,6 +4,7 @@ const productData = localData ? JSON.parse(localData) : []
 const tableDisplay = $('#table-display-product')
 const btnAdd = $('#add-product')
 const modalWorking = $('#exampleModal')
+// modalWorking.modal('show')
 const modalTitle = $('#exampleModalLabel')
 const modalBody = $('.modal-body')
 const btnCancel = $('#btn-cancel')
@@ -140,13 +141,13 @@ btnAdd.click(() => {
                 <p class="none">So luong san pham phai lon hon 0</p>
             </div>`
     })
-    modalBody.children().keypress((event) => {
-        // console.log('da vao');
-        if (event.which == 13) {
-            console.log('vao tiep');
-            // btnConfirm.click()
-        }
-    })
+    // modalBody.children().keypress((event) => {
+    //     // console.log('da vao');
+    //     if (event.which == 13) {
+    //         console.log('vao tiep');
+    //         btnConfirm.click()
+    //     }
+    // })
     btnCancel.html('Huy bo')
     btnConfirm.html('Xac nhan')
     modalWorking.modal('show')
@@ -162,18 +163,18 @@ function deleteData(id) {
     btnConfirm.html('Xac nhan')
     modalWorking.modal('show')
     
-    if (checkDeleteData) {
-        $(document).keypress((event) => {
-            event.preventDefault();
-            // console.log('da vao');
-            if (event.which == 13) {
-                // console.log('vao tiep');
-                $('html').off('keypress')
-                btnConfirm.click()
-                // checkDeleteData = false
-            }
-        })
-    }
+    // if (checkDeleteData) {
+    //     $(document).keypress((event) => {
+    //         event.preventDefault();
+    //         // console.log('da vao');
+    //         if (event.which == 13) {
+    //             // console.log('vao tiep');
+    //             $('html').off('keypress')
+    //             btnConfirm.click()
+    //             // checkDeleteData = false
+    //         }
+    //     })
+    // }
 }
 
 //modal khi chinh sua data
@@ -204,13 +205,13 @@ function adjData(id) {
             </div>`
     })
 
-    modalBody.children().keypress((event) => {
-        console.log('da vao');
-        if (event.which == 13) {
-            console.log('vao tiep');
-            btnConfirm.click()
-        }
-    })
+    // modalBody.children().keypress((event) => {
+    //     console.log('da vao');
+    //     if (event.which == 13) {
+    //         console.log('vao tiep');
+    //         btnConfirm.click()
+    //     }
+    // })
     $('#add-data-name').val(`${dataFix.product}`)
     $('#add-data-date').val(`${dataFix.date}`)
     $('#add-data-quantity').val(`${dataFix.quantity}`)
@@ -316,7 +317,7 @@ btnDisplayComplete.click(() => {
             dataRow.eq(index).removeClass('stocking')
             dataRow.eq(index).removeClass('date-one-day')
             let dateOutDate = Date.parse(element.date)
-            let dayToOutDate = Math.floor((dateOutDate - today) / day)
+            let dayToOutDate = (dateOutDate - today) / day
             if (dayToOutDate > 0) {
                 dataRow.eq(index).addClass('none')
             }
@@ -329,7 +330,7 @@ btnDisplayComplete.click(() => {
             dataRow.eq(index).removeClass('stocking')
             dataRow.eq(index).removeClass('date-one-day')
             let dateOutDate = Date.parse(element.date)
-            let dayToOutDate = Math.floor((dateOutDate - today) / day)
+            let dayToOutDate = (dateOutDate - today) / day
             if (dayToOutDate < 0) {
                 dataRow.eq(index).addClass('none')
             }

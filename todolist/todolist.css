@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  padding: 10px;
+}
+.header-box {
+  margin-bottom: 20px;
+}
+.inp-box {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.inp-box inp {
+  width: 30%;
+}
+.modal-body {
+  display: flex;
+  flex-direction: column;
+}
+.div-inp {
+  display: grid;
+  grid-template-columns: 1fr 2fr 9fr;
+}
+.hidden {
+  opacity: 0;
+}

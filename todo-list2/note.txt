@@ -1,0 +1,7 @@
+- chưa có regex kiểm tra số lượng âm
+- dùng inner HTML nên điền tên sản phẩm cấu trúc html thì bị chạy code
+- thêm chức năng search
+- làm theo hướng sử dụng function nhiều hơn
+
+-NẾU LÀ CODE MỚI, KHÔNG ẢNH HƯỞNG ĐẾN DỰ ÁN => TÌM LỖI QUÁ LÂU => NÊN XÓA ĐI LÀM LẠI
+

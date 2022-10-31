@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="index.css">
+    <title>todo list</title>
+</head>
+<body>
+    <button class="btn btn-primary" id="add-data">Them san pham</button>
+    <button class="btn btn-secondary" id="sort-date">
+        <span>Sort Date</span>
+        <span>
+            <i class="bi bi-caret-up none"></i>
+            <i class="bi bi-caret-down"></i>
+        </span>
+    </button>
+    <button class="btn btn-secondary" id="sort-name">
+        <span>Sort Name</span>
+        <span>
+            <i class="bi bi-caret-up none"></i>
+            <i class="bi bi-caret-down"></i>
+        </span>
+    </button>
+    <button class="btn btn-secondary" id="display-stoke">
+        <span>Display Stoke</span>
+        <span>
+            <i class="bi bi-caret-up none"></i>
+            <i class="bi bi-caret-down"></i>
+        </span>
+    </button>
+    <button class="btn btn-secondary" id="display-date">
+        <span>Display Date</span>
+        <span>
+            <i class="bi bi-caret-up none"></i>
+            <i class="bi bi-caret-down"></i>
+        </span>
+    </button>
+    <button class="btn btn-secondary" id="display-done">
+        <span>Display Done</span>
+        <span>
+            <i class="bi bi-caret-up none"></i>
+            <i class="bi bi-caret-down"></i>
+        </span>
+    </button>
+    <button class="btn btn-secondary" id="display-not-yet">
+        <span>Display Not Done Yet</span>
+        <span>
+            <i class="bi bi-caret-up none"></i>
+            <i class="bi bi-caret-down"></i>
+        </span>
+    </button>
+    <button class="btn btn-secondary" id="btn-search">Search</button>
+    <div id="div-search" class="none">
+        <p>
+            <label for="search">Nhap thong tin tim kiem</label>
+        </p>
+        <input type="text" name="search" id="input-search">
+    </div>
+    <table class="table table-striped">
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Date</td>
+            <td>Quantity</td>
+            <td></td>
+        </tr>
+    </table>
+  <!-- Modal -->
+    <div class="modal fade" id="modal-everything" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modal-title"></h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <label for="id-product">ID</label>
+                    <input type="text" name="id-product" id="id-product" readonly>
+                </div>
+                <div>
+                    <label for="name-product">Name</label>
+                    <input type="text" name="name-product" id="name-product">
+                    <p class="none">Do dai cua ten san pham phai co tu 6 ky tu tro len</p>
+                </div>
+                <div>
+                    <label for="date-product">Date</label>
+                    <input type="date" name="date-product" id="date-product">
+                    <p class="none">Vui long nhap dung dinh dang date</p>
+                </div>
+                <div>
+                    <label for="quantity-product">Quantyti</label>
+                    <input type="number" name="quantity-product" id="quantity-product" min="0">
+                    <p class="none">So luong phai la 1 so nguyen khong am</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Huy bo</button>
+            <button type="button" class="btn btn-primary" id="btn-accept">Xac nhan</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+</body>
+<script src="index.js"></script>
+</html>

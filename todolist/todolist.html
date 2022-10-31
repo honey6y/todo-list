@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./todolist.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="header-box">
+      <button class="badge text-bg-primary">Sort Quantity</button>
+      <button class="badge text-bg-secondary">Sort Date</button>
+      <button class="badge text-bg-success">SortName</button>
+      <button class="badge text-bg-danger">Danger</button>
+      <button class="badge text-bg-warning">Warning</button>
+    </div>
+    <div class="inp-box">
+      <div class="div-inp">
+        <label for="">ID</label>
+        <input type="text" name="" id="inp-id" />
+        <p class="text text-warn-id hidden">ID phải lớn hơn 2 kí tự</p>
+      </div>
+      <div class="div-inp">
+        <label for="">Tên SP</label>
+        <input type="text" name="" id="inp-tenSP" />
+        <p class="text text-warn-name hidden">Tên sp phải lớn hơn 6 kí tự</p>
+      </div>
+      <div class="div-inp">
+        <label for="">Quantity</label>
+        <input type="number" name="" id="inp-quantity" />
+        <p class="text text-warn-quantity hidden">
+          số lượng sản phải phải lớn hơn 2 kí tự
+        </p>
+      </div>
+      <div class="div-inp">
+        <label for="">Giá Tiền</label>
+        <input type="text" name="" id="inp-price" />
+        <p class="text text-warn-price hidden">
+          Giá sản phẩm phải lớn hơn 2 kí tự
+        </p>
+      </div>
+
+      <div class="div-inp">
+        <label for="">Ngày tháng</label>
+        <input type="date" name="" id="inp-date" />
+        <p class="text text-warn-date hidden">Vui lòng nhập đúng ngày tháng</p>
+      </div>
+      <div>
+        <button class="btn-add" onclick="add()">add</button>
+      </div>
+    </div>
+    <table id="task-table" class="table table-striped">
+      <tr>
+        <td>ID</td>
+        <td>Tên SP</td>
+        <td>SỐ lượng</td>
+        <td>Giá tiền</td>
+        <td>Ngày tháng</td>
+        <td>action</td>
+      </tr>
+      <tr>
+        <td>ko co san pham</td>
+      </tr>
+    </table>
+
+    <script src="./todolist.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
